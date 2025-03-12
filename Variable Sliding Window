@@ -1,0 +1,20 @@
+Return the number of substrings containing at least one occurrence of all these characters a, b and c.
+//imp for sliding window
+    public int numberOfSubstrings(String s) {
+        int start=0,end=0;
+        int ans=0;
+        Map<Character,Integer> map=new HashMap<>();
+        while(end<s.length()){
+            char ch=s.charAt(end);
+            map.put(ch,map.getOrDefault(ch,0)+1);
+            while(map.size()==3){
+                ans+=s.length()-end;
+                char stLetter=s.charAt(start);
+                map.put(stLetter,map.get(stLetter)-1);
+                if(map.get(stLetter)==0) map.remove(stLetter);
+                start++;
+            }
+            end++;
+        }
+        return ans;
+    }

@@ -1,0 +1,4 @@
+//To account for odd/even length palindromes during their construction from halves
+int skip=n&1;
+StringBuilder copy=new StringBuilder(sb);
+sb.append(copy.reverse().substring(skip));

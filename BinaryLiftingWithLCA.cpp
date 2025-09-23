@@ -2,7 +2,7 @@
 using namespace std;
 
 #define ll long long
-const ll N=2e5+1,M=20;
+const ll N=2e5+1,M=20;//M=logN
 ll P[N][M];
 
 void dfs(vector<vector<ll>>& edges,vector<ll>& depth,ll curr,ll par){

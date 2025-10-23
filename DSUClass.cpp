@@ -15,7 +15,7 @@ class UnionFind{
 			return find_set(a)==find_set(b);
 		}
 
-		void union(int u, int v){
+		void unionSet(int u, int v){
 			if(!isEqualSet(u,v)){
 				int a=find_set(u),b=find_set(v);
 				if(rank[a]<rank[b]){

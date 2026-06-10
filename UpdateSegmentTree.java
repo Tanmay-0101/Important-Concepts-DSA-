@@ -8,7 +8,7 @@ private void updateST(int idx,int val,int i,int l,int r,int[] seg){
     if(idx<=mid){
         updateST(idx,val,2*i+1,l,mid,seg);
     }else{
-        updateST(idx,val,2*i+2,l,mid,seg);
+        updateST(idx,val,2*i+2,mid+1,r,seg);
     }
 
     seg[i]=Math.max(seg[2*i+1],seg[2*i+2]);
